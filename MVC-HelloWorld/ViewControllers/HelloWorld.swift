@@ -9,6 +9,16 @@ import UIKit
 
 class HelloWorld: UIViewController {
     private let helloWorldLabel = UILabel()
+    private var userRepo: UserRepo
+
+    init(userRepo: UserRepo) {
+        self.userRepo = userRepo
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +27,7 @@ class HelloWorld: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        guard let name = UserRepo.shared.name else {
+        guard let name = userRepo.name else {
             fatalError("Name is nil")
         }
         helloWorldLabel.text = "Hello \(name)!"

@@ -19,6 +19,10 @@
 		CEC766FD29AA77760093A72F /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC766FC29AA77760093A72F /* Button.swift */; };
 		CEC766FF29AA7DB40093A72F /* HelloWorld.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC766FE29AA7DB40093A72F /* HelloWorld.swift */; };
 		CEC7670329AA81480093A72F /* UserRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC7670229AA81480093A72F /* UserRepo.swift */; };
+		CEC7670729AA9F130093A72F /* Logging in Frameworks */ = {isa = PBXBuildFile; productRef = CEC7670629AA9F130093A72F /* Logging */; };
+		CEC7670A29AAAA010093A72F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CEC7670929AAAA010093A72F /* Swinject */; };
+		F8DE902E57F118E0BFFB2183 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE9EC7814216B0EC7BF170 /* Configuration.swift */; };
+		F8DE96CBABC399A804C6AC59 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE91329CF88F0D72D2655E /* Logger.swift */; };
 		F8DE9AE831FAB990DF8D5061 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F8DE9C5C8DB2E897D0EB7B9E /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -37,7 +41,9 @@
 		CEC766FC29AA77760093A72F /* Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button.swift; sourceTree = "<group>"; };
 		CEC766FE29AA7DB40093A72F /* HelloWorld.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorld.swift; sourceTree = "<group>"; };
 		CEC7670229AA81480093A72F /* UserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepo.swift; sourceTree = "<group>"; };
+		F8DE91329CF88F0D72D2655E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F8DE9C5C8DB2E897D0EB7B9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8DE9EC7814216B0EC7BF170 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC7670729AA9F130093A72F /* Logging in Frameworks */,
+				CEC7670A29AAAA010093A72F /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +89,8 @@
 				CEC766E329AA42290093A72F /* Assets.xcassets */,
 				CEC766E529AA42290093A72F /* LaunchScreen.storyboard */,
 				CEC766E829AA42290093A72F /* Info.plist */,
+				F8DE91329CF88F0D72D2655E /* Logger.swift */,
+				F8DE9EC7814216B0EC7BF170 /* Configuration.swift */,
 			);
 			path = "MVC-HelloWorld";
 			sourceTree = "<group>";
@@ -144,6 +154,10 @@
 			dependencies = (
 			);
 			name = "MVC-HelloWorld";
+			packageProductDependencies = (
+				CEC7670629AA9F130093A72F /* Logging */,
+				CEC7670929AAAA010093A72F /* Swinject */,
+			);
 			productName = OverEngineeredMVC;
 			productReference = CEC766D729AA42270093A72F /* MVC-HelloWorld.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +186,10 @@
 				Base,
 			);
 			mainGroup = CEC766CE29AA42270093A72F;
+			packageReferences = (
+				CEC7670529AA9F130093A72F /* XCRemoteSwiftPackageReference "swift-log" */,
+				CEC7670829AAAA010093A72F /* XCRemoteSwiftPackageReference "Swinject" */,
+			);
 			productRefGroup = CEC766D829AA42270093A72F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -209,6 +227,8 @@
 				CEC766FF29AA7DB40093A72F /* HelloWorld.swift in Sources */,
 				CEC766FB29AA743B0093A72F /* FirstScreenExtensions.swift in Sources */,
 				F8DE9AE831FAB990DF8D5061 /* README.md in Sources */,
+				F8DE96CBABC399A804C6AC59 /* Logger.swift in Sources */,
+				F8DE902E57F118E0BFFB2183 /* Configuration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +436,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEC7670529AA9F130093A72F /* XCRemoteSwiftPackageReference "swift-log" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-log";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		CEC7670829AAAA010093A72F /* XCRemoteSwiftPackageReference "Swinject" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Swinject/Swinject";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEC7670629AA9F130093A72F /* Logging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC7670529AA9F130093A72F /* XCRemoteSwiftPackageReference "swift-log" */;
+			productName = Logging;
+		};
+		CEC7670929AAAA010093A72F /* Swinject */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC7670829AAAA010093A72F /* XCRemoteSwiftPackageReference "Swinject" */;
+			productName = Swinject;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CEC766CF29AA42270093A72F /* Project object */;
 }

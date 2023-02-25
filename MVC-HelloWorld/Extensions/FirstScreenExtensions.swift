@@ -9,6 +9,7 @@ import UIKit
 
 extension FirstScreen: UITextFieldDelegate {
     public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        App.logger.debug("Close keyboard since return was pressed")
         textField.resignFirstResponder()
 
         return true

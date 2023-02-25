@@ -18,6 +18,7 @@ extension UIViewController {
 
 extension UIViewController {
     open override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        App.logger.debug("Close keyboard since user touched outside of the keyboard")
         dismissKeyboard()
     }
 

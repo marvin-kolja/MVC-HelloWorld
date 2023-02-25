@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Swinject
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -22,7 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-        window?.rootViewController = UINavigationController(rootViewController: FirstScreen())
+        window?.rootViewController = UINavigationController(rootViewController: App.container.resolve(FirstScreen.self)!);
         window?.makeKeyAndVisible()
     }
 

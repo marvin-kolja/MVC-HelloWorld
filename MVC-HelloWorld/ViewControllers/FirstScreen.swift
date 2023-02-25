@@ -10,6 +10,16 @@ import UIKit
 class FirstScreen: UIViewController {
     private let input = InputField()
     private let continueButton = Button()
+    private var userRepo: UserRepo
+
+    init(userRepo: UserRepo) {
+        self.userRepo = userRepo
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +63,22 @@ class FirstScreen: UIViewController {
     }
 
     @objc func goToHelloWorldScreen() {
-        let nextScreen = HelloWorld()
+        App.logger.debug("Going to next screen \("HelloWorld")")
+        let nextScreen = App.container.resolve(HelloWorld.self)!
         navigationController?.pushViewController(nextScreen, animated: true)
     }
 
     @objc func textFieldDidChange(_ textField: InputField) {
-        if UserRepo.shared.name != nil {
-            UserRepo.shared.name = textField.text
-        } else {
-            UserRepo.shared.name = textField.text
-        }
+        App.logger.debug("Name input changed to \(textField.text ?? "nil")")
+
+        App.logger.debug("Saving name to UserRepo")
+        userRepo.name = textField.text
 
         if textField.validate() != nil {
+            App.logger.debug("Name input is valid, showing continue button")
             continueButton.show()
         } else {
+            App.logger.debug("Name input is invalid, hiding continue button")
             continueButton.hide()
         }
     }
