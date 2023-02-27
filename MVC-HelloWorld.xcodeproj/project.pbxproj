@@ -23,6 +23,7 @@
 		CEC7670A29AAAA010093A72F /* Swinject in Frameworks */ = {isa = PBXBuildFile; productRef = CEC7670929AAAA010093A72F /* Swinject */; };
 		F8DE902E57F118E0BFFB2183 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE9EC7814216B0EC7BF170 /* Configuration.swift */; };
 		F8DE96CBABC399A804C6AC59 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE91329CF88F0D72D2655E /* Logger.swift */; };
+		F8DE9AB270C8467344491B2E /* AppContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8DE9E00CABCDDFA97713694 /* AppContext.swift */; };
 		F8DE9AE831FAB990DF8D5061 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = F8DE9C5C8DB2E897D0EB7B9E /* README.md */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +44,7 @@
 		CEC7670229AA81480093A72F /* UserRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepo.swift; sourceTree = "<group>"; };
 		F8DE91329CF88F0D72D2655E /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		F8DE9C5C8DB2E897D0EB7B9E /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F8DE9E00CABCDDFA97713694 /* AppContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppContext.swift; sourceTree = "<group>"; };
 		F8DE9EC7814216B0EC7BF170 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -91,6 +93,7 @@
 				CEC766E829AA42290093A72F /* Info.plist */,
 				F8DE91329CF88F0D72D2655E /* Logger.swift */,
 				F8DE9EC7814216B0EC7BF170 /* Configuration.swift */,
+				F8DE9E00CABCDDFA97713694 /* AppContext.swift */,
 			);
 			path = "MVC-HelloWorld";
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				F8DE9AE831FAB990DF8D5061 /* README.md in Sources */,
 				F8DE96CBABC399A804C6AC59 /* Logger.swift in Sources */,
 				F8DE902E57F118E0BFFB2183 /* Configuration.swift in Sources */,
+				F8DE9AB270C8467344491B2E /* AppContext.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

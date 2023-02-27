@@ -15,11 +15,17 @@ final class CustomLogger {
         LoggingSystem.bootstrap { label in
             var handler = StreamLogHandler.standardOutput(label: label)
 
-            #if DEBUG
-            handler.logLevel = .trace
-            #else
-            handler.logLevel = .info
-            #endif
+            guard let logLevel = Configuration.logLevel else {
+                #if DEBUG
+                handler.logLevel = .trace
+                #else
+                handler.logLevel = .info
+                #endif
+
+                return handler
+            }
+
+            handler.logLevel = logLevel
 
             return handler
         }
