@@ -10,8 +10,6 @@ import Swinject
 import Logging
 
 class App {
-    static let darkMode = false;
-
     static let container: Container = {
         let container = Container()
         container.register(UserRepo.self) { _ in
